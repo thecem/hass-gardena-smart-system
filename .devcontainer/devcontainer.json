@@ -1,1 +1,20 @@
+{
+  "name": "Home Assistant Devcontainer - Gardena Smart System",
+  "image": "ghcr.io/home-assistant/devcontainer/core:stable",
+  "extensions": [
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-toolsai.jupyter"
+  ],
+  "postCreateCommand": "pip3 install -r requirements.txt -r requirements_dev.txt || true",
+  "forwardPorts": [8123],
+  "mounts": [
+    "source=${localWorkspaceFolder}/config,target=/config,type=bind",
+    "source=${localWorkspaceFolder}/custom_components,target=/config/custom_components,type=bind"
+  ],
+  "settings": {
+    "python.languageServer": "Pylance",
+    "python.pythonPath": "/usr/local/bin/python"
+  }
+}
 
