@@ -8,7 +8,7 @@
   "dependencies": [],
   "codeowners": ["@thecem"],
   "requirements": [
-    "py-smart-gardena@git+https://github.com/thecem/py-smart-gardena.git@1.3.18",
+    "py-smart-gardena @ git+https://github.com/thecem/py-smart-gardena@master#egg=py-smart-gardena",
     "oauthlib==3.2.2"
   ]
 }
